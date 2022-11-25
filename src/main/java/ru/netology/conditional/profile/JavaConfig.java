@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 public class JavaConfig {
 
     @Bean
-    @ConditionalOnProperty(name="netology.profile.dev", havingValue="true")
+    @ConditionalOnProperty(name="netology.profile.dev", havingValue="true", matchIfMissing = true)
     public SystemProfile devProfile() {
         return new DevProfile();
     }
